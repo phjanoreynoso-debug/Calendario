@@ -1,0 +1,2118 @@
+/* Fieldset y legend para horarios */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 0;
+}
+
+legend {
+    font-weight: 600;
+    color: #2c3e50;
+    padding: 0 0.5rem;
+}
+
+/* Variables de color para el logo UPA16 */
+:root {
+    --turquoise: #14b2bf; /* color UPA16 */
+    --navy: #0b3550;      /* color TRES DE FEBRERO */
+    --red: #d33a34;       /* color EMERGENCIAS */
+}
+
+/* Overrides para header y logo (para calcar referencia del logotipo) */
+header {
+    background-color: #ffffff;
+    color: #2c3e50;
+    padding: 1.5rem 1rem 0.5rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0 24px 0;
+}
+
+header .logo-wrapper svg {
+    max-width: 820px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Cuando el logo es una imagen PNG */
+header .logo-wrapper img {
+    max-width: 460px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Ajustes adicionales para el tamaño del logo y espaciado */
+header .logo-wrapper svg {
+    max-width: 460px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+header .logo-wrapper {
+    padding: 12px 0;
+}
+
+@media (max-width: 768px) {
+    header .logo-wrapper img,
+    header .logo-wrapper svg {
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo-wrapper img,
+    header .logo-wrapper svg {
+        max-width: 300px;
+    }
+}
+
+/* Ajuste de padding del header y separación visual con sombra sutil */
+header {
+    padding: 10px 0;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* Contenedor del logo en el header */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0;
+}
+
+/* El SVG debe ser responsivo */
+header .logo-wrapper svg {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.main-controls {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Secciones ocultas */
+.hidden-section {
+    display: none;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones */
+.btn-primary, .btn-secondary, .btn-danger, .btn-info {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-info {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.btn-info:hover {
+    background-color: #27ae60;
+}
+
+/* Tabla de personal */
+.personal-list-container {
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #dee2e6; /* Borde exterior más visible */
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6; /* Bordes más visibles */
+    border-right: 1px solid #dee2e6; /* Agregar bordes verticales */
+}
+
+th {
+    background-color: #e9ecef; /* Fondo más contrastante para headers */
+    font-weight: 600;
+    border-bottom: 2px solid #adb5bd; /* Borde inferior más grueso para headers */
+}
+
+tbody tr:hover {
+    background-color: #f1f3f4; /* Color de hover más visible */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Filas alternadas para mejor legibilidad */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Filas impares en blanco */
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Calendario */
+.calendar-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#current-month {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Campo Sector en controles del calendario */
+.sector-label {
+    margin-left: 10px;
+    font-size: 13px;
+    color: #666;
+}
+
+#sector-input {
+    margin-left: 6px;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    min-width: 160px;
+}
+
+.calendar-container {
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+#calendar-table {
+    min-width: 100%;
+    border: 2px solid #adb5bd; /* Borde más visible para el calendario */
+}
+
+#calendar-table th, #calendar-table td {
+    min-width: 40px;
+    height: 40px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #ced4da; /* Bordes más visibles en todas las celdas */
+}
+
+#calendar-table th:first-child, #calendar-table td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+    text-align: left;
+    min-width: 150px;
+    max-width: 200px;
+    border-right: 2px solid #adb5bd; /* Borde más grueso para separar nombres */
+}
+
+#calendar-table th:first-child {
+    background-color: #e9ecef; /* Fondo más contrastante */
+    font-weight: 600;
+}
+
+#calendar-table th {
+    background-color: #e9ecef; /* Headers del calendario más visibles */
+    font-weight: 600;
+    border-bottom: 2px solid #adb5bd;
+}
+
+#calendar-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+#calendar-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+#calendar-table tbody tr:hover {
+    background-color: #e3f2fd; /* Color de hover diferente para el calendario */
+}
+
+/* Drag & Drop: estilos visuales para reordenamiento de filas */
+#calendar-table tbody tr.dragging {
+    opacity: 0.6;
+}
+
+#calendar-table tbody tr.drag-over {
+    outline: 2px dashed #4a90e2;
+    outline-offset: -2px;
+}
+
+#calendar-table td.name-cell {
+    cursor: grab;
+}
+
+#calendar-table tbody tr.dragging td.name-cell {
+    cursor: grabbing;
+}
+
+/* Fines de semana: estilo gris bien oscuro en encabezados y celdas */
+#calendar-table th.weekend {
+    background-color: #adb5bd; /* gris medio para diferenciar encabezados weekend */
+    color: #2c3e50;
+}
+
+#calendar-table td.weekend {
+    background-color: #2f2f2f; /* gris bien oscuro */
+    color: #f0f0f0;
+}
+
+#calendar-table td.weekend .calendar-cell {
+    background-color: rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #ffffff; /* asegurar texto claro dentro del fin de semana */
+}
+
+/* Mejor visibilidad de códigos en fines de semana */
+#calendar-table td.weekend .codigo-turno {
+    color: #ffffff;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.45);
+}
+
+/* Ajustar textos secundarios para fines de semana */
+#calendar-table td.weekend .turno-fecha,
+#calendar-table td.weekend .horario-personalizado,
+#calendar-table td.weekend .turno-rango,
+#calendar-table td.weekend .turno-companero {
+    color: #eaeaea;
+}
+
+.calendar-cell {
+    cursor: pointer;
+    border-radius: 4px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    min-height: 30px;
+    position: relative; /* permitir posicionar tooltip dentro de la celda */
+}
+
+/* Estilos para los códigos de turno */
+.codigo-turno {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Tooltip para horario y observaciones */
+.calendar-tooltip {
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: rgba(51, 51, 51, 0.95);
+    color: #ffffff;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1.3;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 1000; /* por encima de celdas sticky y overlays */
+    max-width: 200px;
+    white-space: normal;
+}
+
+.calendar-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(51, 51, 51, 0.95) transparent transparent transparent;
+}
+
+.calendar-cell:hover .calendar-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Inversión de colores para filas SADOFE: semana oscuro, finde claro */
+#calendar-table tbody tr.sadofe-row td {
+    background-color: #2f2f2f; /* oscuro por defecto (días de semana) */
+    color: #f0f0f0;
+}
+
+#calendar-table tbody tr.sadofe-row td.weekend {
+    background-color: #ffffff; /* fines de semana en blanco */
+    color: #2c3e50;
+}
+
+#calendar-table tbody tr.sadofe-row td .calendar-cell {
+    background-color: rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #ffffff;
+}
+
+#calendar-table tbody tr.sadofe-row td.weekend .calendar-cell {
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    color: #2c3e50;
+}
+
+#calendar-table tbody tr.sadofe-row td.weekend .codigo-turno,
+#calendar-table tbody tr.sadofe-row td.weekend .turno-fecha,
+#calendar-table tbody tr.sadofe-row td.weekend .horario-personalizado,
+#calendar-table tbody tr.sadofe-row td.weekend .turno-rango,
+#calendar-table tbody tr.sadofe-row td.weekend .turno-companero {
+    color: #2c3e50;
+}
+
+/* La primera columna (nombre) debe verse igual que las demás filas */
+#calendar-table tbody tr.sadofe-row td:first-child {
+    background-color: #ffffff;
+    color: #2c3e50;
+}
+
+/* Estilos para el horario personalizado */
+.horario-personalizado {
+    font-size: 12px;
+    margin-top: 2px;
+    color: #555;
+}
+
+/* Estilos para los diferentes tipos de turnos - Colores más contrastantes */
+.turno-guardia_fija {
+    background-color: #cce7ff; /* Azul más intenso */
+    border: 1px solid #66b3ff;
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.turno-guardia_rotativa {
+    background-color: #ffe6b3; /* Amarillo más intenso */
+    border: 1px solid #ffcc66;
+    color: #cc6600;
+    font-weight: 600;
+}
+
+.turno-carretera {
+    background-color: #d9f7be; /* Verde más intenso */
+    border: 1px solid #95de64;
+    color: #389e0d;
+    font-weight: 600;
+}
+
+.turno-ausente {
+    background-color: #ffccc7; /* Rojo más intenso */
+    border: 1px solid #ff7875;
+    color: #cf1322;
+    font-weight: 600;
+}
+
+.turno-vacaciones {
+    background-color: #efdbff; /* Púrpura más intenso */
+    border: 1px solid #d3adf7;
+    color: #722ed1;
+    font-weight: 600;
+}
+
+.turno-compensatorio {
+    background-color: #f4ffb8; /* Lima más intenso */
+    border: 1px solid #eaff8f;
+    color: #7cb305;
+    font-weight: 600;
+}
+
+.turno-estres {
+    background-color: #d9d9d9; /* Gris más intenso */
+    border: 1px solid #bfbfbf;
+    color: #595959;
+    font-weight: 600;
+}
+
+.turno-cambio_guardia {
+    background-color: #b5f5ec; /* Turquesa más intenso */
+    border: 1px solid #87e8de;
+    color: #08979c;
+    font-weight: 600;
+}
+
+.turno-articulo26 {
+    background-color: #ffd6e7; /* Rosa más intenso */
+    border: 1px solid #ffadd2;
+    color: #c41e3a;
+    font-weight: 600;
+}
+
+.turno-sindical {
+    background-color: #cce7ff; /* Azul más intenso */
+    border: 1px solid #66b3ff;
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.turno-dia_estudio {
+    background-color: #b5f5ec; /* Verde agua más intenso */
+    border: 1px solid #87e8de;
+    color: #08979c;
+    font-weight: 600;
+}
+
+/* Horarios */
+.horario-mañana::before {
+    content: "M";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.horario-tarde::before {
+    content: "T";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.horario-noche::before {
+    content: "N";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Evitar que el scroll dentro del modal se propague al fondo */
+    overscroll-behavior: contain;
+}
+
+/* Bloquear scroll del fondo cuando un modal está abierto */
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px; /* Reducido de 800px a 500px para el modal de turnos */
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    /* Evitar scroll chaining hacia el cuerpo */
+    overscroll-behavior: contain;
+}
+
+/* Estilos específicos para diferentes tipos de modales */
+#turno-modal .modal-content {
+    max-width: 450px; /* Tamaño más compacto para el modal de turnos */
+    width: 85%;
+    max-height: 80vh; /* Aumentar altura máxima del modal de 70vh a 80vh */
+    padding: 1.2rem; /* Reducir padding para hacer el modal más compacto */
+}
+
+#personal-section .modal-content {
+    /* Reducir altura y evitar que se corte el contenido en pantallas bajas */
+    margin: 2% auto; /* Menos margen para aprovechar altura */
+    max-height: 75vh; /* Un poco más bajo que el estándar */
+    overflow: hidden; /* El contenedor interno maneja el scroll */
+    display: flex;
+    flex-direction: column;
+}
+
+#personal-section .section-header {
+    position: sticky; /* Mantener encabezado visible mientras se hace scroll */
+    top: 0;
+    z-index: 3;
+    background: #ffffff;
+}
+
+#personal-section .personal-list-container {
+    flex: 1; /* Ocupa todo el espacio restante del modal */
+    overflow-y: auto; /* Scroll interno para la tabla de personal */
+    padding-top: 8px;
+}
+
+#personal-section .modal-content,
+#stats-section .modal-content {
+    max-width: 800px; /* Mantener tamaño grande para modales de gestión */
+    width: 90%;
+}
+
+/* Modal Detalle del Movimiento: altura reducida y scroll interno */
+#movement-log-modal .modal-content {
+    max-height: 70vh; /* Modal más bajo */
+    overflow: hidden; /* Ocultar overflow general; el body gestiona el scroll */
+    display: flex;
+    flex-direction: column;
+}
+
+#movement-log-modal .section-header {
+    position: sticky; /* Mantener encabezado visible mientras se hace scroll */
+    top: 0;
+    z-index: 3;
+    background: #ffffff;
+}
+
+#movement-log-modal .movement-log-modal-body {
+    flex: 1; /* Ocupa el espacio disponible */
+    overflow-y: auto; /* Scroll interno del contenido */
+    padding-top: 8px;
+}
+
+/* Ajustes adicionales para el modal de turnos */
+#turno-modal .modal-header {
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#turno-modal .form-group {
+    margin-bottom: 0.6rem; /* Reducir aún más el espacio entre campos */
+}
+
+#turno-modal .horario-group {
+    margin-bottom: 0.8rem;
+}
+
+#turno-modal .horario-inputs {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.4rem;
+}
+
+#turno-modal .horario-entrada,
+#turno-modal .horario-salida {
+    flex: 1;
+}
+
+/* Área de observaciones con scroll sutil */
+#turno-modal textarea[name="observaciones"] {
+    max-height: 120px; /* Altura máxima para el textarea */
+    min-height: 80px; /* Altura mínima */
+    resize: vertical; /* Permitir redimensionar solo verticalmente */
+    overflow-y: auto; /* Scroll automático cuando sea necesario */
+    scrollbar-width: thin; /* Firefox: scroll más delgado */
+    scrollbar-color: rgba(255, 255, 255, 0.6) rgba(255, 255, 255, 0.2); /* Firefox: colores del modal */
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) - scroll más fino y del color del modal */
+#turno-modal textarea[name="observaciones"]::-webkit-scrollbar {
+    width: 3px; /* Más fino: reducido de 6px a 3px */
+}
+
+#turno-modal textarea[name="observaciones"]::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2); /* Color más sutil del modal */
+    border-radius: 2px;
+}
+
+#turno-modal textarea[name="observaciones"]::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6); /* Color del modal con transparencia */
+    border-radius: 2px;
+}
+
+#turno-modal textarea[name="observaciones"]::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8); /* Más visible al hover */
+}
+
+#turno-modal .form-actions {
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Login modal específico */
+.login-card {
+    max-width: 420px;
+    padding: 1.8rem 2rem;
+}
+
+.login-title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0 0 1rem 0;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0.25rem 0.2rem;
+}
+
+.input-group .icon {
+    width: 18px;
+    height: 18px;
+    color: #7f8c8d;
+    flex-shrink: 0;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1rem;
+    padding: 0.5rem 0.25rem;
+    background: transparent;
+}
+
+.login-submit {
+    width: 100%;
+    margin-top: 0.4rem;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+    background-color: #2ecc71;
+}
+
+.login-submit:hover {
+    background-color: #27ae60;
+}
+
+.login-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.login-links .divider {
+    width: 1px;
+    height: 14px;
+    background: #e0e0e0;
+}
+
+.login-links a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Notificaciones */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Contenedor de observaciones */
+.observaciones-container {
+    width: 100%;
+}
+
+/* Botón de observaciones en modo lectura */
+.observaciones-button {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    font-family: inherit;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.observaciones-button:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.observaciones-button:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Preview del texto de observaciones */
+#observaciones-preview {
+    flex: 1;
+    color: #495057;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#observaciones-preview.empty {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Icono de editar */
+.edit-icon {
+    margin-left: 8px;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.observaciones-button:hover .edit-icon {
+    opacity: 1;
+}
+
+/* Modo de edición */
+.observaciones-edit-mode {
+    width: 100%;
+    box-sizing: border-box; /* Asegurar que el padding no cause desbordamiento */
+}
+
+.observaciones-edit-mode textarea {
+    width: 100%;
+    min-height: 120px;
+    max-height: 180px; /* Reducir de 200px a 180px para evitar que sea muy ancho */
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(200, 200, 200, 0.2) rgba(240, 240, 240, 0.1); /* Scrollbars más sutiles */
+}
+
+.observaciones-edit-mode textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Scrollbar para el textarea en modo edición */
+.observaciones-edit-mode textarea::-webkit-scrollbar {
+    width: 2px; /* Reducir de 3px a 2px para que sea más sutil */
+}
+
+.observaciones-edit-mode textarea::-webkit-scrollbar-track {
+    background: rgba(240, 240, 240, 0.05); /* Más sutil y menos visible */
+    border-radius: 1px;
+}
+
+.observaciones-edit-mode textarea::-webkit-scrollbar-thumb {
+    background: rgba(200, 200, 200, 0.15); /* Más sutil */
+    border-radius: 1px;
+}
+
+.observaciones-edit-mode textarea::-webkit-scrollbar-thumb:hover {
+    background: rgba(180, 180, 180, 0.25); /* Más sutil en hover */
+}
+
+/* Botones de acción para observaciones */
+.observaciones-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    justify-content: flex-end;
+}
+
+.btn-save-obs, .btn-cancel-obs {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-save-obs {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-save-obs:hover {
+    background-color: #218838;
+}
+
+.btn-cancel-obs {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-cancel-obs:hover {
+    background-color: #5a6268;
+}
+
+/* Estilos para campos condicionales */
+.conditional-fields {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #e9ecef;
+}
+
+.conditional-fields h4 {
+    margin: 0 0 10px 0;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.articulo26-info {
+    background-color: #e3f2fd;
+    border: 1px solid #2196f3;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#articulo26-contador {
+    font-weight: bold;
+    color: #1976d2;
+}
+
+#articulo26-contador.warning {
+    color: #f57c00;
+}
+
+#articulo26-contador.error {
+    color: #d32f2f;
+}
+
+.conditional-fields input[type="date"],
+.conditional-fields select,
+.conditional-fields input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.conditional-fields label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #495057;
+}
+
+/* Estilos adicionales para el calendario con nueva información */
+.turno-rango,
+.turno-companero,
+.turno-fecha {
+    font-size: 10px;
+    color: #666;
+    margin-top: 2px;
+    line-height: 1.2;
+}
+
+.turno-rango {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1px 3px;
+    border-radius: 2px;
+}
+
+.turno-companero {
+    font-style: italic;
+}
+
+.turno-fecha {
+    font-weight: bold;
+}
+
+/* Estilos para tabs de estadísticas */
+.stats-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    color: #2c3e50;
+    background-color: #f8f9fa;
+}
+
+.tab-button.active {
+    color: #2c3e50;
+    border-bottom-color: #3498db;
+    background-color: #f8f9fa;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Estilos para controles de estadísticas */
+.stats-controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* Buscador de estadísticas */
+.stats-search {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 10px 0 12px 0;
+}
+
+.stats-search input[type="text"] {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.stats-search select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.stats-controls .btn-secondary,
+.stats-controls .btn-warning {
+    font-size: 12px;
+    padding: 8px 16px;
+}
+
+/* Modal de Estadísticas: altura reducida y scroll interno */
+#stats-section .modal-content {
+    max-height: 70vh; /* Modal más bajo */
+    overflow: hidden; /* Oculta overflow general, el contenedor interno manejará el scroll */
+    display: flex;
+    flex-direction: column;
+}
+
+#stats-section .section-header {
+    position: sticky; /* Mantener encabezado visible mientras se hace scroll */
+    top: 0;
+    z-index: 3;
+    background: #ffffff;
+}
+
+#stats-section .stats-container {
+    flex: 1; /* Ocupa el espacio restante del modal */
+    overflow-y: auto; /* Scroll interno para el contenido de estadísticas */
+    padding-top: 8px;
+}
+
+/* Estilos para logs anuales */
+.logs-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.logs-header h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 24px;
+}
+
+.logs-header p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.annual-log-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.annual-log-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.log-card-header {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.log-card-header h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.log-card-info {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.log-card-content {
+    padding: 20px;
+}
+
+.log-stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.log-stats-table th,
+.log-stats-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.log-stats-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.log-stats-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.log-summary {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    border-left: 4px solid #3498db;
+}
+
+.log-summary h5 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.summary-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.summary-stat {
+    text-align: center;
+    padding: 8px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.summary-stat .stat-value {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.summary-stat .stat-label {
+    display: block;
+    font-size: 11px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.no-logs-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.no-logs-message i {
+    font-size: 48px;
+    color: #ddd;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Tarjetas y lista para Logs de Movimientos */
+#movement-logs-content {
+    max-height: 70vh; /* Panel más bajo para evitar corte al final */
+    overflow-y: auto; /* Scroll interno para ver más contenido */
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#movement-logs-content .logs-header {
+    position: sticky; /* Mantener visible el encabezado mientras se hace scroll */
+    top: 0;
+    z-index: 2;
+    border-radius: 8px;
+}
+.movement-log-item {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.movement-log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.movement-log-header .log-time {
+    font-size: 12px;
+    color: #666;
+}
+
+.movement-log-header .log-user {
+    font-size: 12px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.movement-log-body {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    align-items: center;
+}
+
+.log-action {
+    font-weight: 600;
+    color: #34495e;
+}
+
+.log-details {
+    font-size: 13px;
+    color: #555;
+}
+
+/* Badges para tipos de acción */
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.badge-add { background: #e8f7ee; color: #2ecc71; border: 1px solid #b9e7c6; }
+.badge-edit { background: #fff8e6; color: #f39c12; border: 1px solid #ffe1a8; }
+.badge-delete { background: #ffe8e6; color: #e74c3c; border: 1px solid #ffc5bf; }
+.badge-turno { background: #e6f2ff; color: #3498db; border: 1px solid #cfe6ff; }
+.badge-personal { background: #f0ebff; color: #8e44ad; border: 1px solid #dfd5ff; }
+
+.movement-date-group {
+    margin: 18px 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #2c3e50;
+}
+
+.movement-date-group .date-line {
+    flex: 1;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+.movement-date-group .date-label {
+    font-size: 12px;
+    background: #f8f9fa;
+    padding: 3px 8px;
+    border-radius: 999px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Extensiones para logs: badge login y filtros */
+.badge-login { background: #eef6ff; color: #1f6feb; border: 1px solid #d6e9ff; }
+
+.logs-header .logs-filters {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.logs-header .logs-filters label {
+    font-size: 12px;
+    color: #555;
+}
+
+.logs-header .logs-filters select {
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+}
+
+/* Responsive para logs anuales */
+@media (max-width: 768px) {
+    .stats-controls {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .stats-tabs {
+        flex-direction: column;
+    }
+    
+    .tab-button {
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+        border-radius: 0;
+    }
+    
+    .tab-button.active {
+        border-bottom-color: #3498db;
+        border-left: 4px solid #3498db;
+    }
+    
+    .log-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .summary-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Estilos para modal de confirmación */
+.confirmation-modal {
+    max-width: 500px;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.confirmation-header {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    padding: 25px 20px;
+    position: relative;
+    transition: background 200ms ease;
+}
+
+.confirmation-header .warning-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    display: block;
+    animation: pulse 2s infinite;
+    transition: color 200ms ease, transform 200ms ease;
+}
+
+.confirmation-header h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Estado aceptado */
+.confirmation-header.accepted {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+}
+.confirmation-header .warning-icon.accepted {
+    color: #2ecc71; /* check verde */
+    transform: scale(1.05);
+}
+
+.confirmation-body {
+    padding: 30px 25px;
+    background: white;
+}
+
+.confirmation-body p {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2c3e50;
+}
+
+.confirmation-body p:last-child {
+    margin-bottom: 0;
+}
+
+.warning-text {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 6px;
+    padding: 12px;
+    color: #856404 !important;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.warning-text i {
+    color: #f39c12;
+}
+
+.confirmation-footer {
+    background: #f8f9fa;
+    padding: 20px 25px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    border-top: 1px solid #e9ecef;
+}
+
+.confirmation-footer .btn-secondary,
+.confirmation-footer .btn-danger {
+    min-width: 120px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.btn-danger:active {
+    transform: translateY(0);
+}
+
+/* Animación para el icono de advertencia */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive para modal de confirmación */
+@media (max-width: 768px) {
+    .confirmation-modal {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+    
+    .confirmation-header {
+        padding: 20px 15px;
+    }
+    
+    .confirmation-header .warning-icon {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+    
+    .confirmation-header h3 {
+        font-size: 18px;
+    }
+    
+    .confirmation-body {
+        padding: 20px 15px;
+    }
+    
+    .confirmation-body p {
+        font-size: 14px;
+    }
+    
+    .confirmation-footer {
+        padding: 15px;
+        flex-direction: column;
+    }
+    
+    .confirmation-footer .btn-secondary,
+    .confirmation-footer .btn-danger {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .calendar-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+/* === Overrides finales para header: logo a la izquierda y texto a la derecha === */
+header {
+    text-align: left;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 8px 12px;
+}
+
+.header-inner .logo-wrapper {
+    padding: 0;
+}
+
+.header-inner .logo-wrapper img,
+.header-inner .logo-wrapper svg {
+    max-width: 140px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.header-title .app-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .header-title .app-title { font-size: 18px; }
+    .header-inner .logo-wrapper img,
+    .header-inner .logo-wrapper svg { max-width: 120px; }
+}
+
+@media (max-width: 480px) {
+    .header-title .app-title { font-size: 16px; }
+    .header-inner { gap: 8px; }
+    .header-inner .logo-wrapper img,
+    .header-inner .logo-wrapper svg { max-width: 100px; }
+}
+/* Fondo del header adaptado al logo (override final) */
+header {
+    background-color: var(--navy);
+    color: #ffffff;
+}
+/* Efecto flotante y resplandor suave del logo */
+.header-inner .logo-wrapper { position: relative; }
+
+.header-inner .logo-wrapper img,
+.header-inner .logo-wrapper svg {
+    position: relative;
+    z-index: 1;
+    /* Sombra suave + halo blanco tenue, respetando la transparencia del PNG */
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.25))
+            drop-shadow(0 0 6px rgba(255, 255, 255, 0.22));
+}
+
+.header-inner .logo-wrapper::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 65px;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 70%);
+    filter: blur(8px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .header-inner .logo-wrapper::before {
+        width: 130px;
+        height: 55px;
+        filter: blur(7px);
+    }
+}
+
+@media (max-width: 480px) {
+    .header-inner .logo-wrapper::before {
+        width: 110px;
+        height: 45px;
+        filter: blur(6px);
+    }
+}
+/* Halo siguiendo la silueta del logo con mask-image (override final) */
+.header-inner .logo-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.0) 60%);
+    /* Recorta el brillo a la forma del logo */
+    -webkit-mask-image: url('logo/upa 16_.png');
+    mask-image: url('logo/upa 16_.png');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    filter: blur(6px);
+    opacity: 0.9;
+    z-index: 0;
+    pointer-events: none;
+}
+/* === Override para intensificar el brillo y la sombra del logo === */
+.header-inner .logo-wrapper img,
+.header-inner .logo-wrapper svg {
+    /* Sombra más profunda y brillo más marcado */
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.45))
+            drop-shadow(0 0 12px rgba(255, 255, 255, 0.50));
+}
+
+.header-inner .logo-wrapper::before {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.0) 70%);
+    filter: blur(12px);
+    opacity: 1;
+    mix-blend-mode: screen;
+}
+/* === Override: halo más blanco y halo rojo tenue para EMERGENCIAS === */
+.header-inner .logo-wrapper img,
+.header-inner .logo-wrapper svg {
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5))
+            drop-shadow(0 0 16px rgba(255, 255, 255, 0.75));
+}
+
+.header-inner .logo-wrapper::before {
+    /* Halo blanco más notorio */
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 65%);
+    filter: blur(14px);
+    opacity: 1;
+    mix-blend-mode: screen;
+}
+
+.header-inner .logo-wrapper::after {
+    /* Segundo halo rojo tenue centrado hacia la parte baja del logo */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 78%, rgba(211, 58, 52, 0.35) 0%, rgba(211, 58, 52, 0) 55%);
+    -webkit-mask-image: url('logo/upa 16_.png');
+    mask-image: url('logo/upa 16_.png');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    filter: blur(10px);
+    opacity: 0.9;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    z-index: 0;
+}
+/* === Override: logo mucho más pequeño y header más bajo === */
+header {
+  padding: 4px 0;
+}
+
+.header-inner {
+  gap: 8px;
+}
+
+header .logo-wrapper {
+  padding: 0;
+}
+
+.header-inner .logo-wrapper img,
+.header-inner .logo-wrapper svg {
+  max-width: 84px;
+  margin: 0;
+}
+
+.header-title .app-title {
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+  .header-inner .logo-wrapper img,
+  .header-inner .logo-wrapper svg {
+    max-width: 72px;
+  }
+  .header-title .app-title {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-inner .logo-wrapper img,
+  .header-inner .logo-wrapper svg {
+    max-width: 64px;
+  }
+  .header-title .app-title {
+    font-size: 14px;
+  }
+}
+/* === Override: header con color más clarito acorde al logo === */
+header {
+  background-color: #1c5b82; /* azul más claro que el navy */
+  color: #ffffff;
+}
+/* === Override: header con degradado suave === */
+header {
+  background-color: #1c5b82; /* fallback */
+  background: linear-gradient(180deg, #2a6d94 0%, #1c5b82 100%);
+  color: #ffffff;
+}
+/* Overlay de bienvenida */
+.welcome-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 300ms ease;
+}
+.welcome-overlay.fade-out {
+    opacity: 0;
+}
+.welcome-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 32px;
+    text-align: center;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    animation: fadeInUp 300ms ease;
+}
+.welcome-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 12px;
+}
+@keyframes fadeInUp {
+    from {opacity: 0; transform: translateY(8px);} 
+    to {opacity: 1; transform: translateY(0);} 
+}
+/* ==== Export mode: nombres más grandes y en negrita para PDF/Excel ==== */
+body.export-mode td.name-cell {
+    font-weight: 700;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+body.export-mode #calendar-table th:first-child {
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* Aumentar altura de filas y padding del calendario durante exportación */
+body.export-mode #calendar-table th,
+body.export-mode #calendar-table td {
+    padding: 12px 10px;
+    height: 56px; /* filas más altas para una mejor lectura en PDF */
+    font-size: 18px; /* tamaño base mayor en exportación */
+}
+
+/* Ajustar tamaños de texto generales en exportación */
+body.export-mode #calendar-table th { 
+    font-size: 16px; /* números de días más grandes */
+}
+body.export-mode .calendar-cell { 
+    min-height: 42px; /* el contenido interno de la celda crece con la fila */
+}
+body.export-mode .codigo-turno { 
+    font-size: 18px; /* códigos más visibles en la descarga */
+}
+
+/* Fila de título para exportación (Mes — Sector) */
+body.export-mode #calendar-table thead tr.export-title-row th {
+    background: #f0f3f5;
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 12px;
+}
+
+/* === Menú hamburguesa === */
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: #2c3e50;
+    font-size: 20px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.hamburger-btn:hover {
+    background-color: #eef2f5;
+    color: #1f2d3d;
+}
+
+.hamburger-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    max-width: 88vw;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    box-shadow: -8px 0 24px rgba(0,0,0,0.18);
+    border-left: 1px solid #e6e9ee;
+    border-radius: 12px 0 0 12px;
+    transform: translateX(100%);
+    transition: transform 280ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    z-index: 1500;
+}
+.hamburger-menu.open {
+    transform: translateX(0);
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-bottom: 1px solid #e6e9ee;
+    background: linear-gradient(180deg, #f7fafc 0%, #ffffff 100%);
+}
+.menu-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #1f2d3d;
+}
+.close-menu-btn {
+    background: none;
+    border: none;
+    color: #2c3e50;
+    font-size: 18px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.close-menu-btn:hover { background-color: #eef2f5; transform: scale(1.03); }
+
+.menu-content {
+    padding: 16px 18px 22px;
+}
+.menu-content .session-info { margin-bottom: 12px; }
+.menu-actions button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease, visibility 0s linear 200ms;
+    z-index: 1400;
+}
+.menu-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+body.menu-open { overflow: hidden; }
+
+@media (max-width: 480px) {
+    .hamburger-menu { width: 88vw; }
+}
+
+/* --- Diseño específico de elementos dentro del panel --- */
+.hamburger-menu .session-info {
+    background: #f4f7fb;
+    border: 1px solid #e6e9ee;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.hamburger-menu #user-role-label {
+    font-size: 14px;
+    color: #475569;
+}
+.hamburger-menu .btn-primary,
+.hamburger-menu .btn-secondary,
+.hamburger-menu .btn-info,
+.hamburger-menu .btn-danger {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transform: translateY(0);
+}
+.hamburger-menu .btn-primary { background-color: #3b82f6; }
+.hamburger-menu .btn-primary:hover { background-color: #2563eb; transform: translateY(-1px); }
+
+/* Modal de Personal: tamaño más compacto y scroll interno del formulario */
+#personal-modal .modal-content {
+    max-width: 500px; /* Un poco más ancho para mejor legibilidad */
+    width: 85%;
+    max-height: 70vh; /* Reducir altura máxima para evitar ocupar demasiada pantalla */
+    margin: 4% auto; /* Menor margen superior */
+    padding: 1rem; /* Reducir padding interno */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* El formulario manejará el scroll interno */
+}
+
+#personal-modal form {
+    flex: 1;
+    overflow-y: auto; /* Scroll interno del formulario cuando sea necesario */
+    overflow-x: hidden; /* Evitar scroll horizontal */
+    padding-right: 0; /* Evitar crear overflow por padding extra */
+}
+
+#personal-modal .form-group {
+    margin-bottom: 0.6rem; /* Espaciado más compacto entre campos */
+}
+
+#personal-modal .form-actions {
+    margin-top: 0.8rem; /* Espaciado moderado sobre las acciones */
+}
+
+#personal-modal .close {
+    font-size: 22px; /* Ícono de cierre un poco más pequeño */
+}
+
+/* Asegurar que los campos no generen overflow horizontal */
+#personal-modal input,
+#personal-modal select,
+#personal-modal textarea {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+.hamburger-menu .btn-secondary { background-color: #94a3b8; }
+.hamburger-menu .btn-secondary:hover { background-color: #64748b; transform: translateY(-1px); }
+.hamburger-menu .btn-info { background-color: #22c55e; }
+.hamburger-menu .btn-info:hover { background-color: #16a34a; transform: translateY(-1px); }
+.hamburger-menu .btn-danger { background-color: #ef4444; }
+.hamburger-menu .btn-danger:hover { background-color: #dc2626; transform: translateY(-1px); }
