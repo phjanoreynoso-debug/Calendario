@@ -273,6 +273,8 @@ tbody tr:nth-child(odd) {
 .calendar-container {
     padding: 1rem;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* scroll con inercia en iOS */
+    overscroll-behavior-x: contain; /* evita chaining de scroll horizontal */
 }
 
 #calendar-table {
@@ -424,6 +426,12 @@ tbody tr:nth-child(odd) {
 }
 
 .calendar-cell:hover .calendar-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Mostrar tooltip también en interacción táctil breve */
+.calendar-cell:active .calendar-tooltip {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
@@ -1857,6 +1865,17 @@ header .logo-wrapper {
   }
 }
 
+/* === Overrides finales: quitar halo/"fantasma" detrás del logo === */
+.header-inner .logo-wrapper img,
+.header-inner .logo-wrapper svg {
+  filter: none !important; /* sin sombras ni halo */
+}
+.header-inner .logo-wrapper::before,
+.header-inner .logo-wrapper::after {
+  content: none !important; /* desactiva pseudo-elementos de resplandor */
+  display: none !important;
+}
+
 @media (max-width: 480px) {
   .header-inner .logo-wrapper img,
   .header-inner .logo-wrapper svg {
@@ -2042,6 +2061,48 @@ body.menu-open { overflow: hidden; }
 
 @media (max-width: 480px) {
     .hamburger-menu { width: 88vw; }
+}
+
+/* Mejorar targets táctiles y comportamiento en móviles */
+.btn-primary, .btn-secondary, .btn-danger, .btn-info, .hamburger-btn { touch-action: manipulation; }
+.calendar-cell { touch-action: manipulation; }
+
+/* Responsivo del calendario y controles para pantallas pequeñas */
+@media (max-width: 768px) {
+    #calendar-table th, #calendar-table td {
+        min-width: 36px;
+        height: 36px;
+    }
+    #calendar-table th:first-child, #calendar-table td:first-child {
+        min-width: 130px;
+        max-width: 160px;
+    }
+    .codigo-turno { font-size: 13px; }
+    .horario-personalizado { font-size: 11px; }
+    .calendar-controls {
+        flex-wrap: wrap;
+        row-gap: 8px;
+    }
+    #sector-input {
+        min-width: unset;
+        flex: 1 1 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    #calendar-table th, #calendar-table td {
+        min-width: 32px;
+        height: 32px;
+    }
+    #calendar-table th:first-child, #calendar-table td:first-child {
+        min-width: 110px;
+        max-width: 130px;
+    }
+    #current-month { font-size: 1rem; }
+    .app-header h2 { font-size: 18px; }
+    .hamburger-btn { font-size: 22px; padding: 10px 12px; }
+    .btn-primary, .btn-secondary, .btn-danger, .btn-info { padding: 10px 14px; }
+    .calendar-container { padding: 0.5rem; }
 }
 
 /* --- Diseño específico de elementos dentro del panel --- */
